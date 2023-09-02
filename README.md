@@ -1,4 +1,6 @@
 ## Quick loom demo
+Note the gradient isn't working as it's supposed to but I think it's cuz webkit is broken on my laptop. 
+
 https://www.loom.com/share/9590866422e048beb213aec70ab52c9d
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
