@@ -1,14 +1,10 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import ScrollableBannerContainer from "../components/ScrollableBannerContainer";
-import FillerCard from "../components/FillterCard";
-import CallToActionCard from "../components/CallToActionCard";
-import { integrationText } from "../components/copy/IntegrationCopy";
-import { TEXT_SCROLL_SPACING, TEXT_INIT_OFFSET } from "../constants/values";
-
-const TOTAL_SCROLL_HEIGHT =
-  TEXT_SCROLL_SPACING * integrationText.length + TEXT_INIT_OFFSET;
+import FillerCard from "../components/FillerCard";
+import CallToActionCard from "../components/CallToActionCard/CallToActionStickyComponent";
+import CallToActionscrollView from "../components/CallToActionCard/CallToActionScrollView";
 
 const Homepage: React.FC = () => {
   return (
@@ -16,7 +12,9 @@ const Homepage: React.FC = () => {
       <FillerCard>
         <h1> Main content here</h1>
       </FillerCard>
-      <ScrollableBannerContainer totalScrollHeight={TOTAL_SCROLL_HEIGHT}>
+      <ScrollableBannerContainer
+        parallaxScrollView={<CallToActionscrollView />}
+      >
         <CallToActionCard />
       </ScrollableBannerContainer>
       <FillerCard>
